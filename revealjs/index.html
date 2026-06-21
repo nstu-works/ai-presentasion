@@ -656,6 +656,97 @@
 </section>
 <!-- END РАЗДЕЛ 9 -->
 
+<!-- ============================================================ -->
+<!-- РАЗДЕЛ 10 — Куда расти (3 slides) -->
+<!-- ============================================================ -->
+<section>
+
+  <!-- 10.0 gbrain -->
+  <section data-transition="fade">
+    <h2>gbrain</h2>
+    <p style="font-size: 0.8em; color: #aaa;">Проект <strong>@maxson_dev</strong></p>
+    <ul>
+      <li class="fragment">Проблема: много проектов — каждый раз объяснять AI контекст компании лень</li>
+      <li class="fragment">Решение: MCP-сервер + pgvector + эмбеддинги = база знаний компании</li>
+      <li class="fragment">Задал вопрос AI &rarr; AI спросил gbrain &rarr; полный ответ за минимум токенов</li>
+      <li class="fragment">CI/CD: изменения в проекте &rarr; автоматически попадают в базу знаний</li>
+    </ul>
+    <aside class="notes">Пост с деталями: https://t.me/maxson_dev/21 — показать аудитории. gbrain индексирует базу через pgvector, выставляет авторизованную ручку наружу. Каждый сотрудник подключает MCP — и AI любого из них знает контекст компании. Произошли изменения → ci/cd → база обновилась автоматически.</aside>
+  </section>
+
+  <!-- 10.1 paperclip / hermes -->
+  <section data-transition="slide">
+    <h2>paperclip / hermes</h2>
+    <p style="font-size: 0.8em; color: #aaa;">Бот от <strong>@danokhlopkov</strong></p>
+    <div class="two-col" style="align-items: flex-start; margin-top: 1rem;">
+      <div>
+        <p class="fragment">Автоматически постит контент в Telegram</p>
+        <p class="fragment" style="font-size: 0.8em; color: #aaa; margin: 0.5rem 0;">контент &rarr; n8n &rarr; бот &rarr; канал</p>
+        <br>
+        <p class="fragment" style="font-size: 0.75em;">Оркестр агентов:</p>
+        <ul style="font-size: 0.7em;">
+          <li class="fragment">PAPERCLIP Orchestrator (CEO)</li>
+          <li class="fragment">CTO &rarr; Staff Eng / Release Eng / QA</li>
+          <li class="fragment">ANALYST (cron 6AM UTC)</li>
+          <li class="fragment">COMMS MNGR</li>
+        </ul>
+      </div>
+      <div class="fragment">
+        <img src="assets/paperclip_2.png" alt="PAPERCLIP architecture" style="max-height: 40vh;">
+      </div>
+    </div>
+    <aside class="notes">Видео-разбор: https://youtu.be/E3P0a03mN8A?si=TV-k3gnokuOh6CPq — рекомендую показать ссылку. Дополнительные скриншоты: paperclip_1, 3, 4 — можно показать по запросу аудитории. Это живой пример production-grade мульти-агентной системы.</aside>
+  </section>
+
+  <!-- 10.2 Вывод -->
+  <section data-transition="slide">
+    <p class="big-quote">Экосистема растёт каждую неделю.</p>
+    <br>
+    <p class="accent big-quote fragment">Следи за комьюнити — там появляются новые инструменты.</p>
+    <aside class="notes">Перед тем как перейти к ресурсам — подготовить аудиторию: то, что вы увидели сегодня — это снимок на момент доклада. Через месяц будет лучше.</aside>
+  </section>
+
+</section>
+<!-- END РАЗДЕЛ 10 -->
+
+<!-- ============================================================ -->
+<!-- РАЗДЕЛ 11 — Ресурсы (2 slides) -->
+<!-- ============================================================ -->
+<section>
+
+  <!-- 11.0 Telegram-каналы -->
+  <section data-transition="fade">
+    <h2>Telegram-каналы</h2>
+    <table>
+      <thead>
+        <tr><th>Канал</th><th>О чём</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>@vibecoding_tg</code></td><td>Скиллы и лайфхаки для вайбкодинга</td></tr>
+        <tr><td><code>@seeallochnaya</code></td><td>Научный взгляд на AI</td></tr>
+        <tr><td><code>@cryptoEssay</code></td><td>Новости AI</td></tr>
+        <tr><td><code>@makebugger</code></td><td>AI со стороны стартапов и бизнеса</td></tr>
+        <tr><td><code>@danokhlopkov</code></td><td>Вайбкодер: стартапы</td></tr>
+        <tr><td><code>@maxson_dev</code></td><td>Вайбкодер: бэкенд</td></tr>
+        <tr><td><code>@artem_designich</code></td><td>Вайбкодер: дизайн и фронтенд</td></tr>
+        <tr><td><code>@a168boba</code></td><td>Философия + практика вайбкодинга</td></tr>
+      </tbody>
+    </table>
+    <aside class="notes">Эти каналы — отправная точка. Там регулярно появляются новые скиллы, кейсы, разборы инструментов.</aside>
+  </section>
+
+  <!-- 11.1 Финал -->
+  <section data-transition="slide">
+    <h1 class="accent">Вопросы?</h1>
+    <br>
+    <img src="assets/my_qr.png" alt="QR code @LEBOWSSKII_DEV" style="max-height: 35vh; border-radius: 12px;">
+    <p class="meta" style="font-size: 0.9em; margin-top: 0.5rem;">@LEBOWSSKII_DEV</p>
+    <aside class="notes">QR-код ведёт на Telegram @LEBOWSSKII_DEV. Оставайтесь на связь — пишите вопросы, делитесь опытом.</aside>
+  </section>
+
+</section>
+<!-- END РАЗДЕЛ 11 -->
+
 </div><!-- .slides -->
 </div><!-- .reveal -->
 
