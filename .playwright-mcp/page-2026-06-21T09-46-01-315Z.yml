@@ -1,0 +1,93 @@
+- application [ref=e2]:
+  - generic:
+    - generic:
+      - generic:
+        - heading [level=2]: Память проекта
+        - list:
+          - listitem:
+            - text: "Файл на диске:"
+            - code: CLAUDE.md
+            - text: /
+            - code: memory/*.md
+          - listitem: Сохраняется между сессиями — нейронка помнит контекст проекта
+          - listitem: "Пишешь один раз: стек, правила, паттерны"
+          - listitem: Каждый новый разговор начинается с полным контекстом
+        - paragraph: «Не объясняй нейронке одно и то же дважды»
+    - generic:
+      - generic:
+        - heading [level=2]: gbrain
+        - paragraph:
+          - text: Проект
+          - strong: "@maxson_dev"
+        - list:
+          - listitem: "Проблема: много проектов — каждый раз объяснять AI контекст компании лень"
+          - listitem: "Решение: MCP-сервер + pgvector + эмбеддинги = база знаний компании"
+          - listitem: Задал вопрос AI → AI спросил gbrain → полный ответ за минимум токенов
+          - listitem: "CI/CD: изменения в проекте → автоматически попадают в базу знаний"
+      - generic:
+        - heading [level=2]: paperclip / hermes
+        - paragraph:
+          - text: Бот от
+          - strong: "@danokhlopkov"
+        - generic:
+          - generic:
+            - paragraph: Автоматически постит контент в Telegram
+            - paragraph: контент → n8n → бот → канал
+            - paragraph: "Оркестр агентов:"
+            - list:
+              - listitem: PAPERCLIP Orchestrator (CEO)
+              - listitem: CTO → Staff Eng / Release Eng / QA
+              - listitem: ANALYST (cron 6AM UTC)
+              - listitem: COMMS MNGR
+          - generic:
+            - img
+    - generic:
+      - generic:
+        - heading [level=2]: Telegram-каналы
+        - table:
+          - rowgroup:
+            - row:
+              - columnheader: Канал
+              - columnheader: О чём
+          - rowgroup:
+            - row:
+              - cell:
+                - code: "@vibecoding_tg"
+              - cell: Скиллы и лайфхаки для вайбкодинга
+            - row:
+              - cell:
+                - code: "@seeallochnaya"
+              - cell: Научный взгляд на AI
+            - row:
+              - cell:
+                - code: "@cryptoEssay"
+              - cell: Новости AI
+            - row:
+              - cell:
+                - code: "@makebugger"
+              - cell: AI со стороны стартапов и бизнеса
+            - row:
+              - cell:
+                - code: "@danokhlopkov"
+              - cell: "Вайбкодер: стартапы"
+            - row:
+              - cell:
+                - code: "@maxson_dev"
+              - cell: "Вайбкодер: бэкенд"
+            - row:
+              - cell:
+                - code: "@artem_designich"
+              - cell: "Вайбкодер: дизайн и фронтенд"
+            - row:
+              - cell:
+                - code: "@a168boba"
+              - cell: Философия + практика вайбкодинга
+      - generic [ref=e22]:
+        - heading "Вопросы?" [level=1] [ref=e23]
+        - img "QR code @LEBOWSSKII_DEV" [ref=e24]
+        - paragraph [ref=e25]: "@LEBOWSSKII_DEV"
+  - complementary:
+    - button "previous slide" [ref=e32] [cursor=pointer]
+    - button "above slide" [ref=e34] [cursor=pointer]
+  - text: Speaker notes
+  - generic [ref=e21]: Вопросы? QR code @LEBOWSSKII_DEV. @LEBOWSSKII_DEV.

@@ -1,0 +1,98 @@
+- application [ref=e2]:
+  - generic:
+    - generic:
+      - generic:
+        - heading [level=2]: "Проблема 1: ручные промты"
+        - generic:
+          - generic:
+            - paragraph:
+              - strong: Было
+            - paragraph: Каждый раз пишешь промт вручную
+            - paragraph: ↓
+            - paragraph: Тратишь время на формулировки
+            - paragraph: ↓
+            - paragraph: Промты разные — результат непредсказуем
+          - generic:
+            - paragraph:
+              - strong: Должно быть
+            - paragraph: Стандартизированная инструкция
+            - paragraph: ↓
+            - paragraph: Один раз написал — используешь всегда
+            - paragraph: ↓
+            - paragraph: Предсказуемый, повторяемый результат
+    - generic:
+      - generic:
+        - heading [level=2]: Скилл — это что?
+        - paragraph: Markdown-файл с инструкцией для нейронки.
+        - paragraph: Один раз написал — используешь в любом проекте.
+        - generic:
+          - generic: skill.md →
+          - generic: Claude Code читает →
+          - generic: применяет к задаче
+      - generic:
+        - heading [level=2]: Как вызвать скилл
+        - generic:
+          - paragraph:
+            - code: /brainstorming
+            - text: — генерация идей и требований
+          - paragraph:
+            - code: /code-review
+            - text: — ревью кода
+          - paragraph:
+            - code: /security-review
+            - text: — аудит безопасности
+          - paragraph:
+            - code: /writing-plans
+            - text: — план реализации
+        - paragraph: Claude Code видит вызов, находит файл скилла, применяет инструкцию.
+    - generic:
+      - generic [ref=e41]:
+        - heading "Интересные скиллы" [level=2] [ref=e42]
+        - table [ref=e43]:
+          - rowgroup [ref=e44]:
+            - row "Скилл Назначение" [ref=e45]:
+              - columnheader "Скилл" [ref=e46]
+              - columnheader "Назначение" [ref=e47]
+          - rowgroup [ref=e48]:
+            - row "gstack Продуктовая разработка" [ref=e49]:
+              - cell "gstack" [ref=e50]:
+                - code [ref=e51]: gstack
+              - cell "Продуктовая разработка" [ref=e52]
+            - row "superpowers Технический флоу (полный цикл)" [ref=e53]:
+              - cell "superpowers" [ref=e54]:
+                - code [ref=e55]: superpowers
+              - cell "Технический флоу (полный цикл)" [ref=e56]
+            - row "oh-my-claudecode Аналог superpowers" [ref=e57]:
+              - cell "oh-my-claudecode" [ref=e58]:
+                - code [ref=e59]: oh-my-claudecode
+              - cell "Аналог superpowers" [ref=e60]
+            - row "llm-sast-scanner Аудит безопасности кода" [ref=e61]:
+              - cell "llm-sast-scanner" [ref=e62]:
+                - code [ref=e63]: llm-sast-scanner
+              - cell "Аудит безопасности кода" [ref=e64]
+            - 'row "ponytail Проверяет: нужно ли изобретать велосипед?" [ref=e65]':
+              - cell "ponytail" [ref=e66]:
+                - code [ref=e67]: ponytail
+              - 'cell "Проверяет: нужно ли изобретать велосипед?" [ref=e68]'
+      - generic:
+        - heading [level=2]:
+          - code: superpowers
+        - paragraph: Это не один скилл — это набор для полного цикла разработки
+        - list
+      - generic:
+        - heading [level=2]: Как установить скиллы
+    - generic:
+      - generic:
+        - heading [level=2]: Мой стек
+        - generic:
+          - generic: +
+          - generic: +
+    - generic:
+      - generic:
+        - heading [level=2]: Мой флоу
+  - complementary:
+    - button "previous slide" [ref=e32] [cursor=pointer]
+    - button "next slide" [ref=e16] [cursor=pointer]
+    - button "below slide" [ref=e18] [cursor=pointer]
+  - text: Speaker notes
+  - generic [ref=e21]: "Интересные скиллы. Скилл Назначение gstack Продуктовая разработка superpowers Технический флоу (полный цикл) oh-my-claudecode Аналог superpowers llm-sast-scanner Аудит безопасности кода ponytail Проверяет: нужно ли изобретать велосипед?"

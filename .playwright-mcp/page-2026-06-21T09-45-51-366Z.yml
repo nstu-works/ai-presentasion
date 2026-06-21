@@ -1,0 +1,27 @@
+- application [ref=e2]:
+  - generic:
+    - generic:
+      - generic [ref=e3]:
+        - heading "Вайбкодинг" [level=1] [ref=e4]
+        - paragraph [ref=e5]: Мой опыт, мой стек, мои грабли
+        - paragraph [ref=e6]: Имя докладчика • 2026
+      - generic:
+        - paragraph: Это не инструкция.
+        - paragraph: Это то, что работает у меня.
+      - generic:
+        - heading [level=2]: Что будет сегодня
+        - list
+    - generic:
+      - generic:
+        - heading [level=2]: AI-продукты на рынке
+      - generic:
+        - heading [level=2]: ChatGPT / Codex
+        - list
+    - generic:
+      - generic:
+        - heading [level=2]: Экосистема Claude
+  - complementary:
+    - button "next slide" [ref=e16] [cursor=pointer]
+    - button "below slide" [ref=e18] [cursor=pointer]
+  - text: Speaker notes
+  - generic [ref=e21]: Вайбкодинг. Мой опыт, мой стек, мои грабли. Имя докладчика • 2026.
