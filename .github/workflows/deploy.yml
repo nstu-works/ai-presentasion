@@ -12,35 +12,38 @@ permissions:
   pages: write
   id-token: write
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: reveraljs
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
-          cache-dependency-path: reveraljs/package-lock.json
+          cache-dependency-path: revealjs/package-lock.json
+
 
       - name: Install dependencies
+        working-directory: revealjs
         run: npm ci
 
-      - name: Build Vite
+
+      - name: Build
+        working-directory: revealjs
         run: npm run build
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: reveraljs/dist
+          path: revealjs/dist
 
 
   deploy:
