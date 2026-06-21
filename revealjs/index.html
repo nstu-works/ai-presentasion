@@ -517,6 +517,145 @@
 </section>
 <!-- END РАЗДЕЛ 8 -->
 
+<!-- ============================================================ -->
+<!-- РАЗДЕЛ 9 — Фишки (7 slides) -->
+<!-- ============================================================ -->
+<section>
+
+  <!-- 9.0 Память проекта -->
+  <section data-transition="fade">
+    <h2>Память проекта</h2>
+    <ul>
+      <li class="fragment">Файл на диске: <code>CLAUDE.md</code> / <code>memory/*.md</code></li>
+      <li class="fragment">Сохраняется между сессиями — нейронка помнит контекст проекта</li>
+      <li class="fragment">Пишешь один раз: стек, правила, паттерны</li>
+      <li class="fragment">Каждый новый разговор начинается с полным контекстом</li>
+    </ul>
+    <br>
+    <p class="accent fragment">&laquo;Не объясняй нейронке одно и то же дважды&raquo;</p>
+    <aside class="notes">CLAUDE.md — главный файл контекста. memory/ — папка с отдельными файлами памяти (пользователь, проект, обратная связь). Claude Code читает их при каждом запуске.</aside>
+  </section>
+
+  <!-- 9.1 Управление моделями -->
+  <section data-transition="slide">
+    <h2>Управление моделями</h2>
+    <div class="two-col" style="margin-top: 1.5rem;">
+      <div class="card fragment">
+        <strong>Haiku</strong>
+        <span style="font-size: 0.8em; color: #aaa;">Рутинные задачи</span>
+        <span style="font-size: 0.75em; color: #50c878;">Дёшево &amp; быстро</span>
+      </div>
+      <div class="card accent-card fragment">
+        <strong>Opus / Sonnet</strong>
+        <span style="font-size: 0.8em; color: #aaa;">Сложные задачи</span>
+        <span style="font-size: 0.75em; color: #e0a050;">Мощно &amp; дороже</span>
+      </div>
+    </div>
+    <br>
+    <p class="fragment meta">Автоматическое переключение через настройки скиллов</p>
+    <p class="accent fragment">Не трать Opus на форматирование README</p>
+    <aside class="notes">Умное использование моделей — это экономия. Haiku отлично справляется с простыми задачами: переименование файлов, форматирование, простые рефакторинги. Opus держи для архитектурных решений и сложных алгоритмов.</aside>
+  </section>
+
+  <!-- 9.2 SDD + TDD -->
+  <section data-transition="slide">
+    <h2>SDD + TDD</h2>
+    <ul>
+      <li class="fragment">1 задача = 1 агент</li>
+      <li class="fragment">Задача закрывается когда тесты зелёные</li>
+      <li class="fragment">Авто-ревью после завершения</li>
+    </ul>
+    <br>
+    <p class="accent big-quote fragment">Предсказуемое качество без ручного контроля каждого шага.</p>
+    <aside class="notes">SDD — субагент-driven development. Каждый агент решает одну задачу, результат проверяется тестами. Это убирает «а AI сделал что-то не то» — у него чёткий критерий успеха.</aside>
+  </section>
+
+  <!-- 9.3 Параллельные агенты -->
+  <section data-transition="slide">
+    <h2>Параллельные агенты</h2>
+    <p class="fragment"><code class="skill-name">/dispatching-parallel-agents</code></p>
+    <br>
+    <div class="fan-diagram fragment">
+      <div class="fan-center">
+        <div class="fan-main">Главный агент</div>
+      </div>
+      <div class="fan-arrow-col">&darr;&darr;</div>
+      <div class="fan-branches">
+        <div class="fan-node">Агент 1</div>
+        <div class="fan-node">Агент 2</div>
+        <div class="fan-node">Агент 3</div>
+        <div class="fan-node">Агент N</div>
+      </div>
+      <div class="fan-arrow-col">&darr;&darr;</div>
+      <div class="fan-center">
+        <div class="fan-main">Сборка результатов</div>
+      </div>
+    </div>
+    <p class="fragment meta">Агенты работают одновременно &rarr; скорость &times;N</p>
+    <aside class="notes">Классический fan-out / fan-in паттерн. Главный агент раздаёт задачи, параллельные агенты выполняют независимо, главный собирает результат. Работает особенно хорошо для задач без зависимостей между ними.</aside>
+  </section>
+
+  <!-- 9.4 Пример: шпаргалка по 12 лекциям -->
+  <section data-transition="slide">
+    <h2>Пример: шпаргалка по 12 лекциям</h2>
+    <ul>
+      <li class="fragment">Задача: выписать ключевые знания из 12 лекций</li>
+      <li class="fragment">12 агентов запущены параллельно</li>
+      <li class="fragment">Каждый обрабатывает одну лекцию &rarr; записывает в файл</li>
+      <li class="fragment">Главный агент собирает все файлы в один</li>
+    </ul>
+    <br>
+    <div class="fragment fan-diagram" style="font-size: 0.7em;">
+      <div class="fan-center">
+        <div class="fan-main">Главный агент</div>
+      </div>
+      <div class="fan-arrow-col">&darr;&darr;</div>
+      <div class="fan-branches">
+        <div class="fan-node">Лекция 1 &rarr; файл</div>
+        <div class="fan-node">Лекция 2 &rarr; файл</div>
+        <div class="fan-node">&#8942;</div>
+        <div class="fan-node">Лекция 12 &rarr; файл</div>
+      </div>
+      <div class="fan-arrow-col">&darr;&darr;</div>
+      <div class="fan-center">
+        <div class="fan-main">Итоговая шпаргалка</div>
+      </div>
+    </div>
+    <aside class="notes">Реальный кейс. Без параллелизма: 12 лекций × ~3 мин = ~36 мин последовательно. С параллельными агентами: ~3-4 минуты суммарно. Привести реальное время.</aside>
+  </section>
+
+  <!-- 9.5 MCP серверы: что это -->
+  <section data-transition="slide">
+    <h2>MCP серверы</h2>
+    <p style="font-size: 0.75em; color: #aaa; margin-bottom: 1rem;">Model Context Protocol</p>
+    <ul>
+      <li class="fragment">Стандарт для подключения внешних инструментов к AI</li>
+      <li class="fragment">Claude &rarr; MCP-сервер &rarr; внешний источник (база, API, документация)</li>
+      <li class="fragment">Одна строчка в настройках Claude Code — новый инструмент готов</li>
+    </ul>
+    <br>
+    <p class="accent big-quote fragment">Ты расширяешь мозг нейронки подключаемыми источниками данных.</p>
+    <aside class="notes">Без MCP нейронка знает только то, что в тренировочных данных — устаревшее, ограниченное. С MCP она может запросить актуальные данные в реальном времени. Это принципиальная разница в возможностях.</aside>
+  </section>
+
+  <!-- 9.6 Context7: MCP для документации -->
+  <section data-transition="slide">
+    <h2>Context7</h2>
+    <p style="font-size: 0.75em; color: #aaa; margin-bottom: 1rem;">MCP-сервер для актуальной документации</p>
+    <ul>
+      <li class="fragment">Claude пишет код &rarr; Context7 подтягивает доку текущей версии библиотеки</li>
+      <li class="fragment">Без него: устаревшие API из обучающей выборки &rarr; deprecated-код</li>
+      <li class="fragment">С ним: «Напиши запрос на Prisma» &rarr; доку текущей версии &rarr; правильный код</li>
+    </ul>
+    <br>
+    <p class="accent big-quote fragment">Никаких галлюцинаций из-за устаревших знаний.</p>
+    <p class="fragment meta">Бесплатный &bull; одна команда установки &bull; тысячи популярных библиотек</p>
+    <aside class="notes">Context7 — один из лучших MCP-серверов для разработчиков. Решает конкретную боль: нейронка обучалась на данных с отсечкой, а библиотеки выпускают новые версии каждые недели. Context7 закрывает этот разрыв.</aside>
+  </section>
+
+</section>
+<!-- END РАЗДЕЛ 9 -->
+
 </div><!-- .slides -->
 </div><!-- .reveal -->
 
