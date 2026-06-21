@@ -135,3 +135,34 @@ All three screenshots confirm: dark theme active, custom CSS applied, navigation
 | Visual: first slide | PASS |
 | Visual: final slide | PASS |
 | Slide count: 39 | PASS |
+
+---
+
+## Task 11: Code Review Fixes (2026-06-21)
+
+### Status: DONE
+
+### Fix 1: h3 Font Size
+- **File:** `revealjs/css/custom.css` (line 24)
+- **Change:** `.reveal h3 { font-size: 1.2em; }` → `.reveal h3 { font-size: 1.6em; }`
+- **Verification:** `grep ".reveal h3"` confirms `1.6em`
+- **Rationale:** Spec requires headings ≥48px (base 30px = ≥1.6em)
+
+### Fix 2: Table Code Tags - skill-name Class
+- **File:** `revealjs/index.html` (lines 406-410, slide 6.0)
+- **Change:** Added `class="skill-name"` to 5 `<code>` tags in skills table:
+  - `gstack`
+  - `superpowers`
+  - `oh-my-claudecode`
+  - `llm-sast-scanner`
+  - `ponytail`
+- **Verification:** `grep 'skill-name'` shows all 5 table rows styled
+- **Rationale:** Align table styling with existing skill name styling in slides 6.1+
+
+### Commit
+- **SHA:** bf85ccb
+- **Message:** Fix h3 font size and add skill-name class to table code tags in slide 6.0
+
+### Items NOT Changed (Per Instructions)
+- Slide 2.4 placeholder text — intentionally left for speaker ("добавить перед докладом")
+- `writing_plans.png` unused asset — kept as supplementary material
