@@ -254,6 +254,103 @@
 </section>
 <!-- END РАЗДЕЛ 2 -->
 
+<!-- ============================================================ -->
+<!-- РАЗДЕЛ 3 — Теоретический флоу разработки (2 slides) -->
+<!-- ============================================================ -->
+<section>
+
+  <!-- 3.0 Схема флоу -->
+  <section data-transition="fade">
+    <h2>Флоу разработки</h2>
+    <div class="flow-chain">
+      <div class="flow-step fragment">Идея</div>
+      <span class="flow-arrow fragment">&rarr;</span>
+      <div class="flow-step fragment">Product Spec</div>
+      <span class="flow-arrow fragment">&rarr;</span>
+      <div class="flow-step fragment">Tech Spec</div>
+      <span class="flow-arrow fragment">&rarr;</span>
+      <div class="flow-step fragment">Задачи</div>
+      <span class="flow-arrow fragment">&rarr;</span>
+      <div class="flow-step fragment">Код</div>
+      <span class="flow-arrow fragment">&rarr;</span>
+      <div class="flow-step fragment">Тесты</div>
+      <span class="flow-arrow fragment">&rarr;</span>
+      <div class="flow-step fragment">Review</div>
+      <span class="flow-arrow fragment">&rarr;</span>
+      <div class="flow-step fragment">Commit</div>
+      <span class="flow-arrow fragment">&rarr;</span>
+      <div class="flow-step fragment">Прод</div>
+    </div>
+    <aside class="notes">Классический производственный цикл. Ничего нового — именно так делают продукты уже десятилетия. Важно это проговорить перед следующим слайдом.</aside>
+  </section>
+
+  <!-- 3.1 Инсайт -->
+  <section data-transition="slide">
+    <p class="big-quote">Это не изобретение — это классика.</p>
+    <br>
+    <p class="accent big-quote fragment">Просто теперь большую часть этого делает AI.</p>
+    <aside class="notes">Ключевой инсайт доклада: вайбкодинг не изобрёл новый процесс, он ускорил старый. AI берёт на себя рутину, а не придумывает процесс за тебя.</aside>
+  </section>
+
+</section>
+<!-- END РАЗДЕЛ 3 -->
+
+<!-- ============================================================ -->
+<!-- РАЗДЕЛ 4 — Проблемы ручной работы с Claude Code (3 slides) -->
+<!-- ============================================================ -->
+<section>
+
+  <!-- 4.0 Проблема 1: промты -->
+  <section data-transition="fade">
+    <h2>Проблема 1: ручные промты</h2>
+    <div class="two-col" style="margin-top: 1.5rem; font-size: 0.8em;">
+      <div class="fragment">
+        <p style="color: #e05050; margin-bottom: 0.5em;"><strong>Было</strong></p>
+        <p>Каждый раз пишешь промт вручную</p>
+        <p>&darr;</p>
+        <p>Тратишь время на формулировки</p>
+        <p>&darr;</p>
+        <p>Промты разные — результат непредсказуем</p>
+      </div>
+      <div class="fragment">
+        <p style="color: #50c878; margin-bottom: 0.5em;"><strong>Должно быть</strong></p>
+        <p>Стандартизированная инструкция</p>
+        <p>&darr;</p>
+        <p>Один раз написал — используешь всегда</p>
+        <p>&darr;</p>
+        <p>Предсказуемый, повторяемый результат</p>
+      </div>
+    </div>
+    <aside class="notes">Классическая боль. Разработчик пишет разные варианты промтов для одной и той же задачи — качество гуляет, время тратится на переформулировки.</aside>
+  </section>
+
+  <!-- 4.1 Проблема 2: security-review -->
+  <section data-transition="slide">
+    <h2>Проблема 2: security-review</h2>
+    <ul>
+      <li class="fragment">Написал промт для ревью кода &rarr; сохранил где-то</li>
+      <li class="fragment">Забыл обновить &rarr; новые уязвимости не проверяются</li>
+      <li class="fragment">Промт для security стареет быстрее, чем его обновляешь</li>
+    </ul>
+    <br>
+    <p class="accent fragment">Технологии меняются, промт — нет.</p>
+    <aside class="notes">Это реальная проблема: OWASP обновляет список уязвимостей, появляются новые паттерны атак, а ваш промт из 2023 года об этом не знает. Промт нужно поддерживать как код.</aside>
+  </section>
+
+  <!-- 4.2 Вывод -->
+  <section data-transition="slide">
+    <h2 style="font-size: 2.5em;">Нужна система.</h2>
+    <br>
+    <p class="fragment" style="font-size: 1.2em;">
+      &darr;
+    </p>
+    <p class="accent big-quote fragment">Решение: Skills</p>
+    <aside class="notes">Переходим к главной теме доклада. Скиллы — это система, которая решает обе проблемы.</aside>
+  </section>
+
+</section>
+<!-- END РАЗДЕЛ 4 -->
+
 </div><!-- .slides -->
 </div><!-- .reveal -->
 
