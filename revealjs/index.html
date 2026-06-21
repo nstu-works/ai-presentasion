@@ -1,43 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-		/>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Вайбкодинг — мой опыт</title>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
 
-		<title>reveal.js</title>
+<!-- ============================================================ -->
+<!-- РАЗДЕЛ 0 — Открытие (3 slides) -->
+<!-- ============================================================ -->
+<section>
 
-		<link rel="stylesheet" href="dist/reset.css" />
-		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+  <!-- 0.1 Титул -->
+  <section data-transition="fade">
+    <h1>Вайбкодинг</h1>
+    <p class="subtitle">Мой опыт, мой стек, мои грабли</p>
+    <br>
+    <p class="meta">Имя докладчика &bull; 2026</p>
+    <aside class="notes">Приветствие. Кратко о себе. Настройте аудиторию — это будет разговор, а не лекция.</aside>
+  </section>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <!-- 0.2 Дисклеймер -->
+  <section data-transition="slide">
+    <p class="big-quote accent">Это не инструкция.</p>
+    <p class="big-quote">Это то, что работает у меня.</p>
+    <br>
+    <p class="fragment">Личный опыт — не научное исследование.</p>
+    <p class="fragment">Не универсальный рецепт.</p>
+    <p class="fragment">Ваш флоу может быть другим — и это нормально.</p>
+    <aside class="notes">Сразу снять ожидания. Это история, не туториал. Вы можете слушать и брать только то, что вам подходит.</aside>
+  </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="dist/plugin/notes.js"></script>
-		<script src="dist/plugin/markdown.js"></script>
-		<script src="dist/plugin/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <!-- 0.3 Оглавление -->
+  <section data-transition="slide">
+    <h2>Что будет сегодня</h2>
+    <ol style="font-size: 0.75em; columns: 2; column-gap: 3rem;">
+      <li class="fragment">AI-продукты на рынке</li>
+      <li class="fragment">Продукты Claude Code</li>
+      <li class="fragment">Теоретический флоу</li>
+      <li class="fragment">Проблемы ручной работы</li>
+      <li class="fragment">Что такое скиллы</li>
+      <li class="fragment">Интересные скиллы</li>
+      <li class="fragment">Мой стек</li>
+      <li class="fragment">Мой флоу</li>
+      <li class="fragment">Фишки</li>
+      <li class="fragment">Куда расти</li>
+      <li class="fragment">Ресурсы</li>
+    </ol>
+    <aside class="notes">Roadmap доклада. Проходим последовательно — каждый раздел самодостаточен.</aside>
+  </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-			});
-		</script>
-	</body>
+</section>
+<!-- END РАЗДЕЛ 0 -->
+
+</div><!-- .slides -->
+</div><!-- .reveal -->
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    progress: true,
+    controls: true,
+    center: true,
+    transition: 'fade',
+    plugins: [ RevealNotes, RevealHighlight, RevealMarkdown ]
+  });
+</script>
+</body>
 </html>
