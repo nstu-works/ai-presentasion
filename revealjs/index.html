@@ -24,7 +24,7 @@
     <h1>Вайбкодинг</h1>
     <p class="subtitle">Мой опыт, мой стек, мои грабли</p>
     <br>
-    <p class="meta">Имя докладчика &bull; 2026</p>
+    <p class="meta">Лесовский Денис &bull; 2026</p>
     <aside class="notes">Приветствие. Кратко о себе. Настройте аудиторию — это будет разговор, а не лекция.</aside>
   </section>
 
@@ -107,12 +107,19 @@
   <!-- 1.2 Deepseek -->
   <section data-transition="slide">
     <h2>Deepseek</h2>
-    <ul>
-      <li class="fragment">Интерфейс оставляет желать лучшего</li>
-      <li class="fragment">Справляется с задачами — результат есть</li>
-    </ul>
-    <br>
-    <p class="accent fragment">&laquo;Выглядит как помойка — работает&raquo;</p>
+    <div class="two-col" style="align-items: center;">
+      <div>
+        <ul>
+          <li class="fragment">Интерфейс оставляет желать лучшего</li>
+          <li class="fragment">Справляется с задачами — результат есть</li>
+        </ul>
+        <br>
+        <p class="accent fragment">&laquo;Выглядит как помойка — работает&raquo;</p>
+      </div>
+      <div class="fragment">
+        <img src="assets/deeposeek_meme.png" alt="Deepseek meme" style="max-height: 65vh;">
+      </div>
+    </div>
     <aside class="notes">Честная оценка: UX страдает, но за деньги — достойный вариант. Если нужен результат и не важен комфорт — Deepseek справится.</aside>
   </section>
 
@@ -188,42 +195,44 @@
   <!-- 2.1 Планы и цены -->
   <section data-transition="slide">
     <h2>Планы и цены</h2>
-    <img src="assets/claude_plans.png" alt="Claude Pro vs Max plans" style="max-height: 38vh;">
-    <div class="two-col" style="margin-top: 1rem; font-size: 0.75em;">
-      <div class="fragment">
-        <strong>Pro</strong> — $17/мес (ежегодно) / ~$20 помесячно<br>
-        <span style="color:#aaa;">Claude Code, Cowork, Design, больше моделей, память</span>
+    <div class="two-col" style="align-items: center; gap: 2.5rem;">
+      <div style="flex: 1; text-align: left; font-size: 0.75em;">
+        <div class="fragment">
+          <strong>Pro</strong> — $17/мес (ежегодно) / ~$20 помесячно<br>
+          <span style="color:#aaa;">Claude Code, Cowork, Design, больше моделей, память</span>
+        </div>
+        <br>
+        <div class="fragment">
+          <strong>Max</strong> — от $100/мес<br>
+          <span style="color:#aaa;">до 20&times; токенов, рекомендован для Code, приоритетный доступ</span>
+        </div>
+        <br>
+        <p class="accent fragment" style="font-size: 0.9em; font-weight: 700;">
+          Лайфхак: Pro можно делить на двоих &rarr; ~$10/мес с человека
+        </p>
+        <p class="fragment meta">Минус: лимит токенов — общий. Следите за расходом.</p>
       </div>
-      <div class="fragment">
-        <strong>Max</strong> — от $100/мес<br>
-        <span style="color:#aaa;">до 20&times; токенов, рекомендован для Code, приоритетный доступ</span>
+      <div style="flex: 1;">
+        <img src="assets/claude_plans.png" alt="Claude Pro vs Max plans" style="max-height: 60vh; width: 100%; object-fit: contain;">
       </div>
     </div>
-    <p class="accent fragment" style="margin-top: 1rem; font-size: 0.9em; font-weight: 700;">
-      Лайфхак: Pro можно делить на двоих &rarr; ~$10/мес с человека
-    </p>
-    <p class="fragment meta">Минус: лимит токенов — общий. Следите за расходом.</p>
     <aside class="notes">На скриншоте: пользователь на месячном биллинге (~$20/мес), ниже — Max от $100. VAT 21% добавляется на чекаут (Нидерланды). Лайфхак с делёжкой — один аккаунт, два разработчика, токены пополам. Работает, пока не упрётесь в лимит.</aside>
   </section>
 
   <!-- 2.2 CLI vs Extension -->
   <section data-transition="slide">
     <h2>Claude Code: CLI vs расширение</h2>
-    <div class="two-col" style="justify-content: center; margin-top: 2rem;">
-      <div class="card fragment" style="text-align: center;">
-        <strong>Terminal</strong>
-        <code>claude</code>
-        <span style="font-size: 0.8em; color: #aaa;">Работает везде</span>
+    <div class="two-col" style="margin-top: 1rem;">
+      <div class="fragment" style="text-align: center;">
+        <p style="font-size: 0.75em; color: #aaa; margin-bottom: 0.5rem;"><strong>Terminal</strong> — <code>claude</code></p>
+        <img src="assets/claude_cli.png" alt="Claude Code CLI" style="width: 100%;">
       </div>
-      <div style="display: flex; align-items: center; font-size: 1.5em; color: #7C6FF7; font-weight: 700; flex: 0;">или</div>
-      <div class="card fragment" style="text-align: center;">
-        <strong>VS Code</strong>
-        <code>Extension</code>
-        <span style="font-size: 0.8em; color: #aaa;">Интеграция с IDE</span>
+      <div class="fragment" style="text-align: center;">
+        <p style="font-size: 0.75em; color: #aaa; margin-bottom: 0.5rem;"><strong>VS Code</strong> — Extension</p>
+        <img src="assets/claude_ext.png" alt="Claude Code VS Code Extension" style="width: 100%;">
       </div>
     </div>
-    <br>
-    <p class="accent big-quote fragment">&laquo;Разницы нет — выбирай по удобству&raquo;</p>
+    <p class="accent big-quote fragment" style="margin-top: 1rem;">&laquo;Разницы нет — выбирай по удобству&raquo;</p>
     <aside class="notes">Один и тот же Claude Code, одни скиллы, одни возможности. Лично использую CLI + VS Code как редактор.</aside>
   </section>
 
@@ -495,7 +504,7 @@
         <p class="accent fragment"><strong>Очищай контекст между этапами</strong></p>
       </div>
       <div class="fragment">
-        <img src="assets/brainstorming.png" alt="Brainstorming session" style="max-height: 38vh;">
+        <img src="assets/brainstorming.png" alt="Brainstorming session" style="max-height: 55vh;">
       </div>
     </div>
     <aside class="notes">Ключевой момент — очистка контекста. Новая сессия = чистый фокус на текущей задаче. Нейронка не путается в деталях предыдущих этапов. Показать скриншот — это живой brainstorming в деле.</aside>
@@ -692,7 +701,7 @@
         </ul>
       </div>
       <div class="fragment">
-        <img src="assets/paperclip_2.png" alt="PAPERCLIP architecture" style="max-height: 40vh;">
+        <img src="assets/paperclip_2.png" alt="PAPERCLIP architecture" style="max-height: 55vh;">
       </div>
     </div>
     <aside class="notes">Видео-разбор: https://youtu.be/E3P0a03mN8A?si=TV-k3gnokuOh6CPq — рекомендую показать ссылку. Дополнительные скриншоты: paperclip_1, 3, 4 — можно показать по запросу аудитории. Это живой пример production-grade мульти-агентной системы.</aside>
@@ -739,7 +748,7 @@
   <section data-transition="slide">
     <h1 class="accent">Вопросы?</h1>
     <br>
-    <img src="assets/my_qr.png" alt="QR code @LEBOWSSKII_DEV" style="max-height: 35vh; border-radius: 12px;">
+    <img src="assets/my_qr.png" alt="QR code @LEBOWSSKII_DEV" style="max-height: 55vh; border-radius: 12px;">
     <p class="meta" style="font-size: 0.9em; margin-top: 0.5rem;">@LEBOWSSKII_DEV</p>
     <aside class="notes">QR-код ведёт на Telegram @LEBOWSSKII_DEV. Оставайтесь на связь — пишите вопросы, делитесь опытом.</aside>
   </section>

@@ -195,7 +195,6 @@
 /* Image helpers */
 .reveal img {
   border-radius: 8px;
-  max-height: 45vh;
   object-fit: contain;
 }
 
