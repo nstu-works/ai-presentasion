@@ -351,6 +351,101 @@
 </section>
 <!-- END РАЗДЕЛ 4 -->
 
+<!-- ============================================================ -->
+<!-- РАЗДЕЛ 5 — Что такое скиллы (2 slides) -->
+<!-- ============================================================ -->
+<section>
+
+  <!-- 5.0 Определение -->
+  <section data-transition="fade">
+    <h2>Скилл — это что?</h2>
+    <br>
+    <p class="fragment">Markdown-файл с инструкцией для нейронки.</p>
+    <br>
+    <p class="accent big-quote fragment">Один раз написал — используешь в любом проекте.</p>
+    <br>
+    <div class="fragment" style="font-size: 0.8em; color: #aaa; display: flex; gap: 2rem; justify-content: center;">
+      <span>skill.md &rarr;</span>
+      <span>Claude Code читает &rarr;</span>
+      <span>применяет к задаче</span>
+    </div>
+    <aside class="notes">Метафора: skill = плагин/инструкция. Нейронка — умная, но без контекста она не знает ваш процесс. Скилл даёт ей этот контекст один раз и навсегда.</aside>
+  </section>
+
+  <!-- 5.1 Как работают -->
+  <section data-transition="slide">
+    <h2>Как вызвать скилл</h2>
+    <br>
+    <div style="font-size: 0.95em;">
+      <p class="fragment"><code class="skill-name">/brainstorming</code> — генерация идей и требований</p>
+      <p class="fragment"><code class="skill-name">/code-review</code> — ревью кода</p>
+      <p class="fragment"><code class="skill-name">/security-review</code> — аудит безопасности</p>
+      <p class="fragment"><code class="skill-name">/writing-plans</code> — план реализации</p>
+    </div>
+    <br>
+    <p class="fragment meta">Claude Code видит вызов, находит файл скилла, применяет инструкцию.</p>
+    <aside class="notes">Вызов скилла — это не магия. Claude видит /название, ищет skill-файл в .claude/skills/, читает его и следует инструкции. Скилл — это просто умный промт, который живёт в файловой системе.</aside>
+  </section>
+
+</section>
+<!-- END РАЗДЕЛ 5 -->
+
+<!-- ============================================================ -->
+<!-- РАЗДЕЛ 6 — Интересные скиллы для разработчика (3 slides) -->
+<!-- ============================================================ -->
+<section>
+
+  <!-- 6.0 Таблица скиллов -->
+  <section data-transition="fade">
+    <h2>Интересные скиллы</h2>
+    <table>
+      <thead>
+        <tr><th>Скилл</th><th>Назначение</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>gstack</code></td><td>Продуктовая разработка</td></tr>
+        <tr><td><code>superpowers</code></td><td>Технический флоу (полный цикл)</td></tr>
+        <tr><td><code>oh-my-claudecode</code></td><td>Аналог superpowers</td></tr>
+        <tr><td><code>llm-sast-scanner</code></td><td>Аудит безопасности кода</td></tr>
+        <tr><td><code>ponytail</code></td><td>Проверяет: нужно ли изобретать велосипед?</td></tr>
+      </tbody>
+    </table>
+    <aside class="notes">Это не исчерпывающий список. Экосистема растёт. Смотрите на GitHub и в Telegram-каналах.</aside>
+  </section>
+
+  <!-- 6.1 Детали: superpowers -->
+  <section data-transition="slide">
+    <h2><code>superpowers</code></h2>
+    <p style="font-size: 0.8em; color: #aaa; margin-bottom: 1rem;">Это не один скилл — это набор для полного цикла разработки</p>
+    <ul>
+      <li class="fragment"><code class="skill-name">/brainstorming</code> — исследование задачи</li>
+      <li class="fragment"><code class="skill-name">/writing-plans</code> — план реализации</li>
+      <li class="fragment"><code class="skill-name">/test-driven-development</code> — TDD</li>
+      <li class="fragment"><code class="skill-name">/code-review</code> — ревью</li>
+      <li class="fragment"><code class="skill-name">/security-review</code> — безопасность</li>
+      <li class="fragment"><code class="skill-name">/systematic-debugging</code> — дебаггинг</li>
+    </ul>
+    <aside class="notes">superpowers — это то, что я использую ежедневно. Каждый скилл — отдельный файл, каждый вызывается отдельно. Можно установить всё, можно взять только нужные.</aside>
+  </section>
+
+  <!-- 6.2 Как установить -->
+  <section data-transition="slide">
+    <h2>Как установить скиллы</h2>
+    <br>
+    <div class="fragment" style="margin-bottom: 1.5rem;">
+      <p style="color: #aaa; font-size: 0.8em; margin-bottom: 0.5em;">Способ 1: через Claude Code</p>
+      <code style="font-size: 0.85em;">«Установи скилл superpowers»</code>
+    </div>
+    <div class="fragment">
+      <p style="color: #aaa; font-size: 0.8em; margin-bottom: 0.5em;">Способ 2: через документацию</p>
+      <p style="font-size: 0.8em;">GitHub README &rarr; команды установки для каждой нейронки</p>
+    </div>
+    <aside class="notes">Большинство скиллов имеют README с командами установки — отдельно для Claude Code, Gemini CLI и других. Можно просто попросить нейронку: «Найди и установи скилл X» — она справится.</aside>
+  </section>
+
+</section>
+<!-- END РАЗДЕЛ 6 -->
+
 </div><!-- .slides -->
 </div><!-- .reveal -->
 
